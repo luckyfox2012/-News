@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Детски новини</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f8ff;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+        }
+
+        nav {
+            background: #333;
+            padding: 10px;
+        }
+
+        nav button {
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            background: orange;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .news {
+            background: white;
+            margin: 15px auto;
+            padding: 15px;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>📰 Детски новини</h1>
+    <p>Новини и интересни факти за деца</p>
+</header>
+
+<nav>
+    <button onclick="showSection('news')">Новини</button>
+    <button onclick="showSection('facts')">Факти</button>
+    <button onclick="showSection('about')">За сайта</button>
+</nav>
+
+<section id="news">
+    <div class="news">
+        <h2>🌍 Новина: Нов парк за деца</h2>
+        <p>В София беше открит нов детски парк с много игри!</p>
+    </div>
+
+    <div class="news">
+        <h2>🚀 Космос</h2>
+        <p>Учени откриха нова планета далеч от Земята!</p>
+    </div>
+</section>
+
+<section id="facts" style="display:none;">
+    <div class="news">
+        <h2>🐘 Факт</h2>
+        <p>Слоновете могат да запомнят неща с години!</p>
+    </div>
+
+    <div class="news">
+        <h2>🌊 Факт</h2>
+        <p>Океаните покриват над 70% от Земята!</p>
+    </div>
+</section>
+
+<section id="about" style="display:none;">
+    <div class="news">
+        <h2>ℹ️ За сайта</h2>
+        <p>Този сайт е направен за деца, за да учат и да се забавляват!</p>
+    </div>
+</section>
+
+<script>
+function showSection(sectionId) {
+    document.getElementById('news').style.display = 'none';
+    document.getElementById('facts').style.display = 'none';
+    document.getElementById('about').style.display = 'none';
+
+    document.getElementById(sectionId).style.display = 'block';
+}
+</script>
+
+</body>
+</html>
